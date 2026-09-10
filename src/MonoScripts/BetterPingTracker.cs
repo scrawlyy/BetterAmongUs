@@ -59,11 +59,11 @@ internal sealed class BetterPingTracker : MonoBehaviour
         // Update position and appearance
         if (ChatPatch.IsChatVisible)
         {
-            aspectPosition.DistanceFromEdge = new Vector3(4.6f, 0.1f, -5);
+            aspectPosition.DistanceFromEdge = new Vector3(5.2f, 0.1f, -5);
         }
         else
         {
-            aspectPosition.DistanceFromEdge = new Vector3(4f, 0.1f, -5);
+            aspectPosition.DistanceFromEdge = new Vector3(4.6f, 0.1f, -5);
         }
 
         aspectPosition.Alignment = AspectPosition.EdgeAlignments.RightTop;
