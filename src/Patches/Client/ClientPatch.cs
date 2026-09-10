@@ -140,9 +140,6 @@ internal static class ClientPatch
     [HarmonyPostfix]
     private static void AmongUsClient_CoStartGame_Postfix(AmongUsClient __instance)
     {
-        // Censor in-game chat
-        ChatPatch.CensorPlayerChats();
-
         // Start custom loading sequence
         if (!BAUModdedSupportFlags.HasFlag(BAUModdedSupportFlags.Disable_CustomLoadingBar))
         {

@@ -18,12 +18,6 @@ internal static class MeetingHudPatch
     [HarmonyPostfix]
     private static void MeetingHud_Start_Postfix(MeetingHud __instance)
     {
-        // Uncensor chats when meeting starts
-        if (PlayerControl.LocalPlayer.IsAlive())
-        {
-            ChatPatch.UncensorPlayerChats();
-        }
-
         if (__instance == null || __instance.playerStates == null)
             return;
 
@@ -127,12 +121,6 @@ internal static class MeetingHudPatch
     [HarmonyPostfix]
     private static void MeetingHud_Close_Postfix()
     {
-        // Censor chats when meeting ends
-        if (PlayerControl.LocalPlayer.IsAlive())
-        {
-            ChatPatch.CensorPlayerChats();
-        }
-
         timeOpen = 0f;
         Logger_.LogHeader("Meeting Has Ended");
     }

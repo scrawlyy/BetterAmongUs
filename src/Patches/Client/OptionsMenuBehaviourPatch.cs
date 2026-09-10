@@ -6,7 +6,6 @@ using BetterAmongUs.Managers;
 using BetterAmongUs.Modules;
 using BetterAmongUs.MonoScripts.Extended;
 using BetterAmongUs.Patches.Gameplay.UI;
-using BetterAmongUs.Patches.Gameplay.UI.Chat;
 using BetterAmongUs.Utilities;
 using BetterAmongUs.Utilities.Extension;
 using HarmonyLib;
@@ -48,7 +47,7 @@ internal static class OptionsMenuBehaviourPatch
         ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_SendBetterRpc, BAUConfigs.SendBetterRpc, 1, __instance, SendBetterRpcAction);
         ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_BetterNotifications, BAUConfigs.BetterNotifications, 1, __instance, BetterNotificationManager.ClearNotifications);
         ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_ForceOwnLanguage, BAUConfigs.ForceOwnLanguage, 1, __instance);
-        ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_ChatDarkMode, BAUConfigs.ChatDarkMode, 1, __instance, ChatPatch.SetChatTheme);
+        ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_DarkMode, BAUConfigs.DarkMode, 1, __instance);
         ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_ChatInGame, BAUConfigs.ChatInGameplay, 1, __instance);
         ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_LobbyInfo, BAUConfigs.LobbyPlayerInfo, 1, __instance);
         ClientOptionItem.CreateToggle(TranslationStrings.BetterOption_LobbyTheme, BAUConfigs.DisableLobbyTheme, 1, __instance, ToggleLobbyTheme);

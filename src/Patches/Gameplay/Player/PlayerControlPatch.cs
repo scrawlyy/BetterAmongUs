@@ -69,16 +69,6 @@ internal static class PlayerControlPatch
         OptionPlayerItem.UpdateAllValues();
     }
 
-    [HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.Die))]
-    [HarmonyPostfix]
-    private static void PlayerControl_Die_Postfix(PlayerControl __instance)
-    {
-        if (__instance.IsLocalPlayer())
-        {
-            ChatPatch.UncensorPlayerChats();
-        }
-    }
-
     [HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.MurderPlayer))]
     [HarmonyPostfix]
     private static void PlayerControl_MurderPlayer_Postfix(PlayerControl __instance, PlayerControl target, MurderResultFlags resultFlags)

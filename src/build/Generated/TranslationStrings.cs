@@ -284,9 +284,9 @@ public static class TranslationStrings
     public static readonly TranslationString BetterOption_ForceOwnLanguage = new("BetterOption.ForceOwnLanguage");
 
     /// <summary>
-    /// Base Translation: Chat Dark Mode
+    /// Base Translation: Dark Mode
     /// </summary>
-    public static readonly TranslationString BetterOption_ChatDarkMode = new("BetterOption.ChatDarkMode");
+    public static readonly TranslationString BetterOption_DarkMode = new("BetterOption.DarkMode");
 
     /// <summary>
     /// Base Translation: Chat In Gameplay

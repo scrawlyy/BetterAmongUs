@@ -29,9 +29,9 @@ internal static class BAUConfigs
     internal static BAUConfigEntry<bool> ForceOwnLanguage { get; } = new("Better Options", "ForceOwnLanguage", false);
 
     /// <summary>
-    /// Gets the configuration entry for chat dark mode setting.
+    /// Gets the configuration entry for dark mode setting.
     /// </summary>
-    internal static BAUConfigEntry<bool> ChatDarkMode { get; } = new("Better Options", "ChatDarkMode", true);
+    internal static BAUConfigEntry<bool> DarkMode { get; } = new("Better Options", "DarkMode", true);
 
     /// <summary>
     /// Gets the configuration entry for chat in gameplay setting.
@@ -95,7 +95,7 @@ internal static class BAUConfigs
     {
         BAUModdedSupportEvents.OnBAUConfigEntriesLoadedEvent.InvokeAll([
             AntiCheat, SendBetterRpc, BetterNotifications,
-            ForceOwnLanguage, ChatDarkMode, ChatInGameplay, LobbyPlayerInfo,
+            ForceOwnLanguage, DarkMode, ChatInGameplay, LobbyPlayerInfo,
             DisableLobbyTheme, UnlockFPS, ShowFPS,
             MinimapIcons, VentColorGroups, CommandPrefix,
             FavoriteColor, SettingsPreset
